@@ -6,7 +6,7 @@ description = "Minimal DualSense-to-XInput bridge: reads a PS5 controller over H
 license = "MIT"
 
 [target.'cfg(windows)'.dependencies]
-hidapi = "2"
+hidapi = { version = "2", default-features = false, features = ["windows-native"] }
 vigem-client = "0.1"
 
 [profile.release]
