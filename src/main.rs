@@ -1,3 +1,5 @@
+mod dualsense;
+
 fn main() {
-    println!("Hello, world!");
+    println!("dsx: Windows-only binary; this is a placeholder main.");
 }
