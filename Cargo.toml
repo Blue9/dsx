@@ -1,0 +1,13 @@
+[package]
+name = "dsx"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal DualSense-to-XInput bridge: reads a PS5 controller over HID and feeds a virtual Xbox 360 pad via ViGEmBus."
+license = "MIT"
+
+[target.'cfg(windows)'.dependencies]
+hidapi = "2"
+vigem-client = "0.1"
+
+[profile.release]
+strip = true
