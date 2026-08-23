@@ -1,0 +1,9 @@
+# Cross-compile from WSL/Linux without system mingw:
+# uses Rust's bundled lld + locally extracted mingw libs (see README).
+[target.x86_64-pc-windows-gnu]
+linker = "rust-lld"
+rustflags = [
+    "-C", "link-self-contained=yes",
+    "-L", "/home/g/.local/mingw/usr/x86_64-w64-mingw32/lib",
+    "-L", "/home/g/.local/mingw/usr/lib/gcc/x86_64-w64-mingw32/13-posix",
+]
