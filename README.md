@@ -24,12 +24,17 @@ Cross-compile from WSL/Linux (requires `mingw-w64`):
 cargo build --release --target x86_64-pc-windows-gnu
 ```
 
-## Use
+## Install and use
 
-1. Connect the DualSense.
-2. Run `dsx.exe`. It prints `bridging` when active.
-3. Start the game. It sees an Xbox 360 controller.
-4. Ctrl+C to stop.
+1. Build, then run `install.ps1` (from Windows or WSL). It copies the exe
+   to `%LOCALAPPDATA%\dsx` and creates a Desktop shortcut. Re-run it after
+   every rebuild.
+2. Connect the DualSense.
+3. Double-click the `dsx` shortcut. A console window shows the status;
+   it prints `bridging` when active.
+4. Start the game. It sees an Xbox 360 controller.
+5. Close the console window (or Ctrl+C) to stop. Run only one instance
+   at a time.
 
 ## Mapping
 
