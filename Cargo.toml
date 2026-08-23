@@ -7,7 +7,7 @@ license = "MIT"
 
 [target.'cfg(windows)'.dependencies]
 hidapi = { version = "2", default-features = false, features = ["windows-native"] }
-vigem-client = "0.1"
+vigem-client = { version = "0.1", features = ["unstable_xtarget_notification"] }
 
 [profile.release]
 strip = true
