@@ -26,9 +26,10 @@ cargo build --release --target x86_64-pc-windows-gnu
 
 ## Install and use
 
-1. Build, then run `install.ps1` (from Windows or WSL). It copies the exe
-   to `%LOCALAPPDATA%\dsx` and creates a Desktop shortcut. Re-run it after
-   every rebuild.
+1. Build, then run `install.ps1` (from Windows or WSL). It creates a
+   Desktop shortcut that launches the build via `wsl.exe`. This route works
+   under Smart App Control, which blocks unsigned exes started from NTFS.
+   The shortcut always runs the latest build; no re-install after rebuilds.
 2. Connect the DualSense.
 3. Double-click the `dsx` shortcut. A console window shows the status;
    it prints `bridging` when active.
